@@ -251,7 +251,7 @@ module.exports = {
     *                                                                          *
     ***************************************************************************/
     onlyAllowOrigins: [
-      'https://accounting-48336-api.herokuapp.com/',
+      'https://accounting-48336-api.herokuapp.com',
     ],
 
 
