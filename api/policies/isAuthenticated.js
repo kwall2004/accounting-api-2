@@ -1,4 +1,4 @@
-import * as jwt from 'express-jwt';
+var jwt = require('express-jwt');
 
 var authCheck = jwt({
   secret: new Buffer(sails.config.auth.clientSecret, 'base64'),
