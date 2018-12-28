@@ -48,8 +48,8 @@ module.exports.datastores = {
     *    (See https://sailsjs.com/config/datastores for help.)                 *
     *                                                                          *
     ***************************************************************************/
-    // adapter: 'sails-mysql',
-    // url: 'mysql://root:peabody1@localhost:3306/accounting',
+    adapter: 'sails-mysql',
+    url: 'mysql://b683ca3985cf24:121f8a19@us-cdbr-iron-east-01.cleardb.net/heroku_17bef1ebf75c4dc?reconnect=true',
 
   },
 
