@@ -6,10 +6,10 @@ var authCheck = jwt({
     cache: true,
     rateLimit: true,
     jwksRequestsPerMinute: 5,
-    jwksUri: "https://kwall2004.auth0.com/.well-known/jwks.json"
+    jwksUri: 'https://kwall2004.auth0.com/.well-known/jwks.json'
   }),
-  audience: sails.config.auth.clientId,
-  issuer: "https://kwall2004.auth0.com/",
+  audience: 'https://accounting-api/',
+  issuer: 'https://kwall2004.auth0.com/',
   algorithms: ['RS256']
 });
 
