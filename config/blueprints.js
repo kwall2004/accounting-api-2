@@ -38,4 +38,15 @@ module.exports.blueprints = {
 
   // shortcuts: true,
 
+
+  parseBlueprintOptions: function(req) {
+    var queryOptions = req._sails.hooks.blueprints.parseBlueprintOptions(req);
+  
+    if (req.options.blueprintAction === 'find' || req.options.blueprintAction === 'populate') {
+      queryOptions.criteria.limit = undefined;
+    }
+  
+    return queryOptions;
+  }
+
 };
