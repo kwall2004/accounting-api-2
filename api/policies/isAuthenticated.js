@@ -1,8 +1,15 @@
 var jwt = require('express-jwt');
+var jwks = require('jwks-rsa');
 
 var authCheck = jwt({
-  secret: new Buffer(sails.config.auth.clientSecret, 'base64'),
+  secret: jwks.expressJwtSecret({
+    cache: true,
+    rateLimit: true,
+    jwksRequestsPerMinute: 5,
+    jwksUri: "https://kwall2004.auth0.com/.well-known/jwks.json"
+  }),
   audience: sails.config.auth.clientId,
+  issuer: "https://kwall2004.auth0.com/",
   algorithms: ['RS256']
 });
 
