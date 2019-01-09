@@ -29,6 +29,9 @@ module.exports = {
       type: 'number',
       columnName: 'transAmount'
     },
+    cleared: {
+      type: 'boolean'
+    },
     createdAt: false,
     updatedAt: false
 
