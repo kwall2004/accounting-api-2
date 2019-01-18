@@ -12,7 +12,7 @@ module.exports = {
 
     id: {
       type: 'number',
-      required: true
+      autoIncrement: true
     },
     date: {
       type: 'ref',

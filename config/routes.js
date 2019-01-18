@@ -33,5 +33,6 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
+  'POST /transactions': 'TransactionController.createEach'
 
 };
