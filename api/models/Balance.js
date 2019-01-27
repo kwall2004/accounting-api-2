@@ -4,6 +4,7 @@
  * @description :: A model definition represents a database table/collection.
  * @docs        :: https://sailsjs.com/docs/concepts/models-and-orm/models
  */
+var moment = require('moment');
 
 module.exports = {
 
@@ -28,5 +29,13 @@ module.exports = {
 
   },
 
-};
+  customToJSON: function () {
 
+    return {
+      ...this,
+      date: moment(this.date).format('YYYY-MM-DDTHH:mm:ss')
+    };
+
+  }
+
+};
