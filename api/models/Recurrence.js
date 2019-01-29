@@ -62,8 +62,8 @@ module.exports = {
 
     return {
       ...this,
-      startDate: moment(this.startDate).format('YYYY-MM-DDTHH:mm:ss'),
-      endDate: this.endDate && moment(this.endDate).format('YYYY-MM-DDTHH:mm:ss')
+      startDate: moment(this.startDate).format('YYYY-MM-DD'),
+      endDate: this.endDate && moment(this.endDate).format('YYYY-MM-DD')
     };
 
   }

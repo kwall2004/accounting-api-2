@@ -33,7 +33,7 @@ module.exports = {
 
     return {
       ...this,
-      date: moment(this.date).format('YYYY-MM-DDTHH:mm:ss')
+      date: moment(this.date).format('YYYY-MM-DD')
     };
 
   }
